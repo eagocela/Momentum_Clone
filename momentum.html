@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- STYLES -->
+
+    <script
+      src="https://kit.fontawesome.com/1d4397aa5b.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="./main.css" />
+
+    <title>MOMENTUM</title>
+  </head>
+  <body>
+    <div class="wrapper-main">
+      <div class="container-main">
+        <!-- WELCOME -->
+        <div class="container-welcome">
+          <div class="welcome-title">
+            <span id="hello">HELLO!</span>
+          </div>
+          <input
+            type="text"
+            id="input-name"
+            name="input-name"
+            placeholder="What is your name?"
+            autocomplete="off"
+          />
+        </div>
+
+        <!-- TOP MENU -->
+
+        <nav class="navbar">
+          <li id="button-Search" class="search_container">
+            <label for="search_input">
+              <i class="search_icon fa-solid fa-magnifying-glass"></i>
+            </label>
+            <form class="search_form" id="search_form">
+              <input
+                class="search_input"
+                id="search_input"
+                placeholder="Google Search"
+                type="text"
+                required
+              />
+            </form>
+          </li>
+
+          <li id="button-toDoList" class="button-minimalist">Todo</li>
+        </nav>
+
+        <!-- TO DO LIST -->
+
+        <div id="container-toDoList" class="container-toDoList hide">
+          <button class="closeToDoListButton">
+            <i class="fas fa-times"></i>
+          </button>
+          <h4 id="title-toDoList">Today</h4>
+          <div class="inputField-toDoList">
+            <input
+              class="line-input"
+              type="text"
+              id="input-toDoItem"
+              placeholder="New Todo"
+              name="input-toDoItem"
+              autocomplete="off"
+            />
+            <button id="button-add-toDoItem">
+              <i id="addToDoButton" class="fas fa-plus"></i>
+            </button>
+          </div>
+          <!-- W/ ALL TASKS -->
+          <ul class="toDo-List"></ul>
+        </div>
+
+        <!-- RESET -->
+
+        <div id="container-reset" class="container-reset hide">
+          <header>
+            <h3 id="reset-confirmation-message"></h3>
+          </header>
+          <ul>
+            <li id="button-reset-yes" class="button-minimalist">YES</li>
+            <li id="button-reset-no" class="button-minimalist">NO</li>
+          </ul>
+        </div>
+
+        <!-- CENTER CONTAINER -->
+
+        <div class="container-center">
+          <div class="wrapper-center flex-column-item hide">
+            <!-- CLOCK  -->
+
+            <div class="clock" id="clock">
+              <h1></h1>
+            </div>
+
+            <!-- GREETING -->
+
+            <div class="container-greeting flex-column-item">
+              <div class="flex-row-item greeting">
+                <h3 class="greet" id="greet-text"></h3>
+                <h3 id="userName"></h3>
+                <h3>.</h3>
+              </div>
+              <li id="button-editName" class="button-minimalist">EDIT NAME</li>
+            </div>
+
+            <!-- FOCUS -->
+
+            <div class="focus-display flex-column-item hide">
+              <h4 class="focus-today">TODAY</h4>
+              <h4 id="focus"></h4>
+              <span id="editFocusButton" class="focusEdit"
+                ><i class="fa-solid fa-ellipsis"></i
+              ></span>
+              <!-- <h6 class="affirm">GoodJob!</h6> -->
+            </div>
+            <div class="container-focus">
+              <h4>What's your main focus for today?</h4>
+              <input
+                type="text"
+                id="focus-input"
+                name="focus-input"
+                autocomplete="off"
+              />
+            </div>
+          </div>
+
+          <!-- QUOTES -->
+
+          <div class="container-quotes flex-column-item hide">
+            <h5 id="prodQuote" class="prodQuote"></h5>
+            <ul class="prodQuoteButtons flex-row-item">
+              <li id="button-generateQuote" class="button-minimalist">
+                Change Quote
+              </li>
+              <li id="button-addQuote" class="button-minimalist">Add Quote</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- BOTTOM BUTTONS  -->
+
+        <!-- MUSIC -->
+
+        <div class="container-spotify hide">
+          <iframe
+            id="spotify"
+            src="https://open.spotify.com/embed/playlist/0vvXsWCC9xrXsKd4FyS8kM"
+            width="100%"
+            height="80"
+            frameborder="0"
+            allowtransparency="true"
+            allow="encrypted-media"
+          ></iframe>
+        </div>
+        <div class="container-MusicButton">
+          <li id="button-music" class="button-minimalist">Music</li>
+        </div>
+
+        <!-- RESET -->
+
+        <ul class="pageSettingButtons">
+          <li id="button-reset" class="button-minimalist">Reset</li>
+        </ul>
+      </div>
+
+      <!-- END -->
+    </div>
+
+    <!-- SCRIPT -->
+
+    <script src="js/background.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/music.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/todo.js"></script>
+  </body>
+</html>
